@@ -196,8 +196,7 @@ newslettersLink.addEventListener("click", function () {
 });
 
  
-
- // Selecionar o link de assinatura (ou agendamento)
+// Selecionar o link de assinatura (ou agendamento)
 const subscriptionLink = document.getElementById("subscriptionLink");
 
 // Selecionar o campo de e-mail usando a classe
@@ -208,9 +207,10 @@ function showBookingAlert(event) {
     // Impedir o comportamento padrão do link (não recarregar a página)
     event.preventDefault();
 
+    const emailValue = emailField.value.trim();
+
     // Verificar se o campo de e-mail está vazio
-    if (emailField.value.trim() === "") {
-        // Se o campo de e-mail estiver vazio, exibir um alerta informando o usuário
+    if (emailValue === "") {
         Swal.fire({
             title: 'Atenção!',
             text: 'Por favor, insira seu e-mail antes de prosseguir com a assinatura.',
@@ -218,8 +218,17 @@ function showBookingAlert(event) {
             confirmButtonText: 'OK',
             confirmButtonColor: '#f44336',
         });
+    } else if (emailValue.length < 5) {
+        // Verificar se o e-mail tem menos de 5 caracteres
+        Swal.fire({
+            title: 'E-mail inválido',
+            text: 'O e-mail deve ter pelo menos 5 caracteres. Por favor, insira um e-mail válido.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#f44336',
+        });
     } else {
-        // Se o campo de e-mail estiver preenchido, mostrar a notificação de agendamento
+        // Se o campo de e-mail estiver preenchido corretamente, mostrar a notificação de agendamento
         Swal.fire({
             title: 'Assinatura enviada com sucesso',
             html: ` 
@@ -241,9 +250,6 @@ function showBookingAlert(event) {
 
 // Adicionar evento de clique ao link de agendamento
 subscriptionLink.addEventListener("click", showBookingAlert);
-
-
-
 
 
 
