@@ -1,1093 +1,440 @@
-<!DOCTYPE html>
-<html lang="en">
-
+  <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NETZAGE</title>
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="Dbo7CIrp1qIjlnLC2e+IOQ" defer="true"></script>
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="assets/images/logo.png" type="image/svg+xml">
-
-<!--
-SWIPERE OFFLINE
--->
-<link rel="stylesheet" href="alert/sweetalert2.min.css">
-<script src="alert/sweetalert2.min.js"></script>
-
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-
-  <!-- Incluindo o link do FontAwesome para o ícone de floco de neve -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
-  <style>
-    /* Estilos principais do site */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      overflow-x: hidden; /* Para evitar a barra de rolagem horizontal */
-    }
-  
-    /* Estilo para a div com fundo vermelho e ícone de Natal */
-    #natalDiv {
-      width: 100%;
-      height: 40px; /* Altura padrão */
-      background-color: red;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 22px;
-      font-weight: bold;
-      z-index: 1000;
-      position: relative;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    #natalDiv i {
-      font-size: 30px;
-    }
-  
-    /* Estilo para a neve */
-    .snowflakes {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.7; /* Para dar um efeito sutil */
-    }
-  
-    .snowflake {
-      position: absolute;
-      color: white;
-      font-size: 1.5rem;
-      user-select: none;
-      z-index: 9999;
-      border-radius: 50%; /* Bordas arredondadas */
-    }
-  
-    /* Animação de queda da neve */
-    @keyframes fall {
-      0% { transform: translateY(-100px); }
-      100% { transform: translateY(100vh); }
-    }
-  
-    /* Animação lateral da neve */
-    @keyframes sway {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(20px); }
-    }
-  
-    /* Responsividade da div de Natal */
-    @media screen and (max-width: 600px) {
-      #natalDiv {
-        font-size: 18px; /* Tamanho de texto menor para dispositivos móveis */
-        height: 25px; /* A altura de 25px será aplicada aqui */
-      }
-  
-      #natalDiv i {
-        font-size: 20px; /* Ícone menor para dispositivos móveis */
-      }
-    }
-  
-    /* Responsividade para larguras menores que 850px */
-    @media screen and (max-width: 850px) {
-      .snowflake {
-        font-size: 1rem; /* Menor tamanho para neve em telas pequenas */
-      }
-  
-      .snowflakes {
-        opacity: 0.9; /* Aumentando a opacidade em telas menores */
-      }
-    }
-  
-    /* Ajustando a altura da neve para telas pequenas */
-    @media screen and (max-width: 850px) {
-      .snowflake {
-        height: 15px; /* Ajustando o tamanho da neve */
-        width: 15px; /* Largura ajustada para neve em telas menores */
-      }
-    }
-  </style>
-  
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascoal Zage | Gestor de Tráfego & Programador Fullstack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <link rel="stylesheet" href="assets/style.css">
+ <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon">
 </head>
-
-<body id="top">
-   <!-- Div de Natal com ícone e mensagem -->
-   <div id="natalDiv">
-    <i class="fa fa-snowflake-o"></i> Feliz Natal! 🎄
-  </div>
-  
-  <!-- 
-    - #HEADER
-  -->
- <header class="header" data-header>
-  <div class="container">
-
-    <a href="#" class="logo"><img src="assets/images/logo.jpg" alt="" width="60px"></a>
-
-    <nav class="navbar" data-navbar>
-
-      <div class="wrapper">
-        <a href="#" class="logo">NETZAGE</a>
-
-        <button class="nav-close-btn" aria-label="fechar menu" data-nav-toggler>
-          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-        </button>
-      </div>
-
-      <ul class="navbar-list">
-
-        <li class="navbar-item">
-          <a href="#home" class="navbar-link" data-nav-link>Início</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#service" class="navbar-link" data-nav-link>Serviços</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#feature" class="navbar-link" data-nav-link>Funcionalidades</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#project" class="navbar-link" data-nav-link>Portfólio</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-        </li>
-
-      </ul>
-
-    </nav>
-
-    <button class="nav-open-btn" aria-label="abrir menu" data-nav-toggler>
-      <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-    </button>
-
-    <a style="cursor: pointer;" class="btn btn-primary has-before has-after chat">Agendar Serviço 📅</a>
-
-    <div class="overlay" data-nav-toggler data-overlay></div>
-
-  </div>
-</header>
-
-
-
-
-
-  <main>
-    <article>
- <!-- 
-  # HERO - Seção Otimizada para SEO
--->
-<section class="section hero" id="home" aria-label="Hero da NETZAGE - Criação de Websites e Lojas Online">
-  <div class="container">
-
-    <div class="hero-content">
-
-      <!-- Título Principal Otimizado -->
-      <h1 class="h1 hero-title">
-        Construindo <span class="has-before">Produtos Digitais</span> e Lojas Online de Sucesso
-      </h1>
-
-      <!-- Descrição Otimizada com Palavras-Chave -->
-      <p class="hero-text">
-        Na NETZAGE, projetamos e construímos websites, lojas virtuais e marcas digitais com foco em design moderno e eficiência excepcional. Impulsione seu negócio com nossas soluções personalizadas!
-      </p>
-
-      <!-- Botões de Ação com CTAs Claros -->
-      <div class="wrapper">
-        <a class="btn btn-primary has-before has-after chat" href="#services" style="cursor: pointer;">
-          🚀 Agendar Serviço
-        </a>
-
-        <button class="hero-btn" aria-label="Ver vídeo promocional da Z-Solutions">
-          <ion-icon name="play-outline" aria-hidden="true"></ion-icon>
-          <span class="span">Por Trás das Cenas</span>
-        </button>
-      </div>
-
-      <!-- Links Sociais com Texto Descritivo -->
-      <ul class="social-list">
-
-        <li>
-          <a href="https://www.facebook.com/share/p/1VN57H58Vv/" class="social-link" aria-label="Página do Facebook da NETZAGE" style="--color: hsl(241, 77%, 63%);">
-            <ion-icon name="logo-facebook"></ion-icon>
-            <span class="span">Facebook</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="https://www.youtube.com/" class="social-link" aria-label="Canal do YouTube da NETZAGE" style="--color: hsl(0, 100%, 50%);">
-            <ion-icon name="logo-youtube"></ion-icon>
-            <span class="span">YouTube</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="https://x.com/?mx=2" class="social-link" aria-label="Twitter oficial da NETZAGE" style="--color: hsl(203, 89%, 53%);">
-            <ion-icon name="logo-twitter"></ion-icon>
-            <span class="span">Twitter</span>
-          </a>
-        </li>
-
-      </ul>
-
-    </div>
-
-    <!-- Banner com Descrição Alt Otimizada -->
-    <figure class="hero-banner">
-      <img src="./assets/images/hero-banner.png" 
-           width="794" 
-           height="637" 
-           alt="Banner principal mostrando serviços da NETZAGE, como criação de websites e lojas online"
-           class="w-100">
-    </figure>
-
-  </div>
-</section>
-
-
-
-
-
-
-      <!-- 
-        - #SERVICE
-      -->
-      <section class="section service" id="service" aria-label="Serviços">
-        <div class="container">
-      
-          <p class="section-subtitle has-before text-center">Nossos Serviços</p>
-      
-          <h2 class="h2 section-title text-center">Gerencie seu negócio com o nosso 
-            <span class="has-before">melhor serviço</span></h2>
-      
-          <ul class="grid-list">
-      
-            <li class="chat">
-              <div class="service-card" style="--color: 174, 77%, 50%">
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-1.png" width="30" height="30" loading="lazy" 
-                       alt="Ícone representando gestão de produtos">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title">Gestão de Produtos</a>
-                </h3>
-              </div>
-            </li>
-      
-            <li class="chat">
-              <div class="service-card" style="--color: 267, 76%, 57%">
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-2.png" width="30" height="30" loading="lazy" 
-                       alt="Ícone de desenvolvimento web e mobile">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title">Desenvolvimento Web e Mobile</a>
-                </h3>
-              </div>
-            </li>
-      
-            <li class="chat">
-              <div class="service-card" style="--color: 17, 100%, 68%">
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-3.png" width="30" height="30" loading="lazy" 
-                       alt="Ícone de suporte ao cliente rápido">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title">Suporte ao Cliente Rápido</a>
-                </h3>
-              </div>
-            </li>
-      
-            <li class="chat">
-              <div class="service-card" style="--color: 343, 98%, 60%">
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-4.png" width="30" height="30" loading="lazy" 
-                       alt="Ícone de recursos humanos">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title chat">Recursos Humanos</a>
-                </h3>
-              </div>
-            </li>
-      
-            <li class="chat">
-              <div class="service-card" style="--color: 210, 100%, 53%">
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-5.png" width="30" height="30" loading="lazy" 
-                       alt="Ícone de design e criatividade">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title chat">Design e Criatividade</a>
-                </h3>
-              </div>
-            </li>
-      
-            <li class="chat">
-              <div class="service-card" style="--color: 157, 89%, 44%">
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-6.png" width="30" height="30" loading="lazy" 
-                       alt="Ícone de marketing e comunicação">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title">Marketing e Comunicação</a>
-                </h3>
-              </div>
-            </li>
-      
-            <li class="chat">
-              <div class="service-card" style="--color: 52, 98%, 50%">
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-7.png" width="30" height="30" loading="lazy" 
-                       alt="Ícone de desenvolvimento de negócios">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title">Desenvolvimento de Negócios</a>
-                </h3>
-              </div>
-            </li>
-      
-            <li class="chat">
-              <a href="#" class="link-card" style="--color: 203, 97%, 75%" 
-                 aria-label="Veja mais quatro serviços oferecidos pela NETZAGE">
-                <span class="span">04 Serviços a Mais</span>
-                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-              </a>
-            </li>
-      
-          </ul>
-      
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Pascoal<span>Zage</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#results">Resultados</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/938142738" class="btn-whatsapp">Negociar Serviço</a>
         </div>
-      </section>
-      
-      
+    </header>
 
-
-
-
-      <!-- 
-        - #FEATURE
-      -->
-
-      <!-- 
-  - #FEATURE
--->
-
-<section class="section feature" id="feature" aria-label="Destaques da NETZAGE">
-  <div class="container">
-
-    <figure class="feature-banner">
-      <img src="./assets/images/feature-banner.svg" width="582" height="585" loading="lazy" alt="Por que escolher a NETZAGE"
-        class="w-100">
-    </figure>
-
-    <div class="feature-content">
-
-      <p class="section-subtitle has-before">Por que nos escolher</p>
-
-      <h2 class="h2 section-title">
-        Especialistas em ajudar nossos clientes a superar <span class="has-before">desafios </span>
-      </h2>
-
-      <ul class="feature-list">
-
-        <li>
-          <div class="feature-card">
-
-            <div class="card-icon" style="--color: 174, 77%, 50%">
-              <ion-icon name="rocket-sharp" aria-hidden="true"></ion-icon>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Pascoal Zage – <span>Gestor de Tráfego e Programador Fullstack</span></h1>
+                <p>Crio estratégias que conectam anúncios a resultados. Da programação ao lucro.</p>
+                <a href="https://wa.me/938142738" class="btn-primary">Vamos conversar agora</a>
             </div>
-
-            <div>
-              <h3 class="h3 card-title">Processo ágil de trabalho</h3>
-
-              <p class="card-text">
-                Na NETZAGE, projetamos, construímos e entregamos soluções com eficiência e excelência, escalando seus resultados.
-              </p>
+            <div class="hero-image">
+                <img src="assets/pascoalzage.jpg" alt="Pascoal Zage">
             </div>
-
-          </div>
-        </li>
-
-        <li>
-          <div class="feature-card">
-
-            <div class="card-icon" style="--color: 241, 77%, 63%;">
-              <ion-icon name="people-sharp" aria-hidden="true"></ion-icon>
-            </div>
-
-            <div>
-              <h3 class="h3 card-title">Equipe dedicada</h3>
-
-              <p class="card-text">
-                Nossa equipe colaborativa entrega soluções personalizadas, focadas em suas necessidades específicas.
-              </p>
-            </div>
-
-          </div>
-        </li>
-
-        <li>
-          <div class="feature-card">
-
-            <div class="card-icon" style="--color: 343, 98%, 60%;">
-              <ion-icon name="headset-sharp" aria-hidden="true"></ion-icon>
-            </div>
-
-            <div>
-              <h3 class="h3 card-title">Suporte 24/7</h3>
-
-              <p class="card-text">
-                Disponibilidade total para atender suas demandas, oferecendo suporte de alta qualidade a qualquer momento.
-              </p>
-            </div>
-
-          </div>
-        </li>
-
-      </ul>
-
-    </div>
-
-  </div>
-</section>
-
-      
-
-
-
-
-
-      <!-- 
-        - #PROJECT
-      -->
-      <section class="section project" id="project" aria-label="project">
-        <div class="container">
-      
-          <p class="section-subtitle has-before text-center">Projetos</p>
-      
-          <h2 class="h2 section-title text-center">
-            Projetos completos da <span class="has-before">NETZAGE</span>
-          </h2>
-      
-          <ul class="filter-list">
-      
-            <li>
-              <button class="filter-btn active" data-filter-btn>Website</button>
-            </li>
-      
-            <li>
-              <button class="filter-btn" data-filter-btn>Página de Destino</button>
-            </li>
-      
-            <li>
-              <button class="filter-btn" data-filter-btn>App Android</button>
-            </li>
-      
-            <li>
-              <button class="filter-btn" data-filter-btn>Identidade Visual</button>
-            </li>
-      
-          </ul>
-      
-          <ul class="grid-list">
-      
-            <li>
-              <div class="project-card">
-      
-                <figure class="card-banner img-holder" style="--width: 835; --height: 429;">
-                  <img src="./assets/images/project-1.jpg" width="835" height="429" loading="lazy" alt="Arte para livro"
-                    class="img-cover">
-                </figure>
-      
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Design Gráfico</a>
-                  </h3>
-      
-                  <a href="#" class="card-tag">Design</a>
-                </div>
-      
-              </div>
-            </li>
-      
-            <li>
-              <div class="project-card">
-      
-                <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
-                  <img src="./assets/images/project-2.jpg" width="416" height="429" loading="lazy" alt="Design Gráfico"
-                    class="img-cover">
-                </figure>
-      
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Arte para Livro</a>
-                  </h3>
-      
-                  <a href="#" class="card-tag">Branding</a>
-                </div>
-      
-              </div>
-            </li>
-       
-            <li>
-              <div class="project-card">
-      
-                <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
-                  <img src="./assets/images/project-3.webp" width="416" height="429" loading="lazy" alt="Arte Digital 3D"
-                    class="img-cover">
-                </figure>
-      
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Arte Digital 3D</a>
-                  </h3>
-      
-                  <a href="#" class="card-tag">Design</a>
-                </div>
-      
-              </div>
-            </li>
-      
-            <li>
-              <div class="project-card">
-      
-                <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
-                  <img src="./assets/images/project-4.jpg" width="416" height="429" loading="lazy" alt="Web Design"
-                    class="img-cover">
-                </figure>
-      
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Web Design</a>
-                  </h3>
-      
-                  <a href="#" class="card-tag">Design</a>
-                </div>
-      
-              </div>
-            </li>
-      
-            <li>
-              <div class="project-card">
-      
-                <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
-                  <img src="./assets/images/project-5.jpg" width="416" height="429" loading="lazy"
-                    alt="Design de Aplicativo Móvel" class="img-cover">
-                </figure>
-      
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Design de Aplicativo Móvel</a>
-                  </h3>
-      
-                  <a href="#" class="card-tag">Design</a>
-                </div>
-      
-              </div>
-            </li>
-      
-          </ul>
-      
         </div>
-      </section>
-      
+    </section>
 
-
-
-
-      <!-- 
-        - #NEWSLETTER
-      -->
-
-      <section class="section newsletter has-bg-image" aria-label="newsletter"
-  style="background-image: url('./assets/images/newsletter-bg.jpg')">
-  <div class="container">
-
-    <figure class="newsletter-banner">
-      <img src="./assets/images/newsletter-banner.png" width="355" height="356" loading="lazy"
-        alt="Banner da newsletter" class="w-100">
-    </figure>
-
-    <div class="newsletter-content">
-
-      <p class="section-subtitle has-before">Receba todas as novidades</p>
-
-      <h2 class="h2 section-title">Assine nossa newsletter para as últimas atualizações e ofertas</h2>
-
-      <form action="" class="newsletter-form">
-        <input type="email" name="email_address" placeholder="Digite seu e-mail" required class="email-field"  minlength="5">
-
-        <button type="submit" class="btn btn-secondary has-before has-after" id="subscriptionLink">
-          <span class="span">Inscrever-se</span>
-
-          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-        </button>
-      </form>
-
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-      <!-- 
-        - #BLOG
-      -->
-      <section class="section blog" id="blog" aria-label="blog">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-      
-          <p class="section-subtitle text-center has-before">Novidades e Dicas</p>
-      
-          <h2 class="h2 section-title text-center">
-            <span class="has-before">Destaques</span> do nosso blog
-          </h2>
-      
-          <ul class="blog-list">
-      
-            <li>
-              <div class="blog-card large ">
-      
-                <figure class="card-banner selldow">
-                  <img src="./assets/images/blog-1.svg" width="644" height="363" loading="lazy"
-                    alt="Dicas para criar lojas online com alto impacto visual" class="img-cover">
-                </figure>
-      
-                <div class="card-content selldow">
-      
-                  <div class="wrapper">
-                    <a href="#" class="tag">Design e Desenvolvimento</a>
-      
-                    <a href="#" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-      
-                      <span class="span">15 de Dezembro de 2024</span>
-                    </a>
-                  </div>
-      
-                  <h3>
-                    <a href="#" class="card-title">Dicas para criar lojas online com alto impacto visual</a>
-                  </h3>
-      
-                  <p class="card-text">
-                    Saiba como projetar lojas online atraentes e funcionais que convertem mais visitantes em clientes.
-                  </p>
-      
+            <div class="section-title">
+                <h2>O Que Me Diferencia</h2>
+                <p>Combinando expertise técnica em programação com visão estratégica de marketing para entregar resultados mensuráveis</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Transformando tráfego em receita com tecnologia e estratégia</h3>
+                    <p>Com mais de 5 anos de experiência no mercado digital, ajudo empresas a escalarem suas vendas através da combinação perfeita entre anúncios precisos e automações inteligentes.</p>
+                    <p>Minha abordagem vai além da simples gestão de campanhas - integro tecnologia, análise de dados e psicologia de vendas para criar máquinas de crescimento contínuo.</p>
+                    
+                    <div class="skills">
+                        <div class="skill-item">
+                            <h4>Especialista em Meta Ads e Google Ads</h4>
+                            <p>Domínio completo das principais plataformas de anúncios para maximizar seu ROI</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Integrações avançadas</h4>
+                            <p>Pixel, Tag Manager, UTM e APIs para rastreamento preciso de conversões</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Capacidade técnica em programação</h4>
+                            <p>Automações personalizadas que eliminam gargalos e aumentam eficiência</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Foco absoluto em vendas</h4>
+                            <p>Todas as métricas são importantes, mas o que realmente importa é o lucro no seu caixa</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Estratégias personalizadas</h4>
+                            <p>Soluções sob medida para cada nicho e estágio do negócio</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Visão de negócio</h4>
+                            <p>Entendo seu modelo de receita para otimizar cada etapa do funil</p>
+                        </div>
+                    </div>
                 </div>
-      
-              </div>
-            </li>
-      
-            <li>
-              <div class="blog-card">
-      
-                <figure class="card-banner selldow">
-                  <img src="./assets/images/blog-2.svg" width="202" height="162" loading="lazy"
-                    alt="Tendências de design para websites em 2024" class="img-cover">
-                </figure>
-      
-                <div class="card-content">
-      
-                  <div class="wrapper">
-                    <a href="#" class="tag selldow">Tendências</a>
-      
-                    <a href="#" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-      
-                      <span class="span selldow">10 de Dezembro de 2024</span>
-                    </a>
-                  </div>
-      
-                  <h3 class="h3">
-                    <a href="#" class="card-title selldow">Tendências de design para websites em 2024</a>
-                  </h3>
-      
-                </div>
-      
-              </div>
-            </li>
-      
-            <li>
-              <div class="blog-card">
-      
-                <figure class="card-banner selldow">
-                  <img src="./assets/images/blog-3.svg" width="202"  loading="lazy"
-                    alt="Como aumentar as vendas com uma loja virtual otimizada" class="img-cover">
-                </figure>
-      
-                <div class="card-content">
-      
-                  <div class="wrapper">
-                    <a href="#" class="tag">Marketing Digital</a>
-      
-                    <a href="#" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-      
-                      <span class="span selldow">8 de Dezembro de 2024</span>
-                    </a>
-                  </div>
-      
-                  <h3 class="h3">
-                    <a href="#" class="card-title selldow">Como aumentar as vendas com uma loja virtual otimizada</a>
-                  </h3>
-      
-                </div>
-      
-              </div>
-            </li>
-      
-            <li>
-              <div class="blog-card">
-      
-                <figure class="card-banner selldow">
-                  <img src="./assets/images/blog-4.svg" width="202" height="162" loading="lazy"
-                    alt="Ferramentas essenciais para designers e desenvolvedores" class="img-cover">
-                </figure>
-      
-                <div class="card-content">
-      
-                  <div class="wrapper">
-                    <a href="#" class="tag selldow">Ferramentas</a>
-      
-                    <a href="#" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-      
-                      <span class="span selldow">5 de Dezembro de 2024</span>
-                    </a>
-                  </div>
-      
-                  <h3 class="h3 selldow">
-                    <a href="#" class="card-title">Ferramentas essenciais para designers e desenvolvedores</a>
-                  </h3>
-      
-                </div>
-      
-              </div>
-            </li>
-      
-          </ul>
-      
+            </div>
         </div>
-      </section>
-      
+    </section>
 
-    </article>
-  </main>
-
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-  <footer class="footer">
+   
+    <!-- Services Section -->
+<section class="services" id="services">
     <div class="container">
-  
-      <div class="footer-top section">
-  
-        <div class="footer-brand">
-  
-          <p class="footer-list-title">Sobre a NETZAGE</p>
-  
-          <p class="footer-text">
-            NETZAGE oferece soluções inovadoras e seguras para otimizar seus processos digitais. Nossos serviços são projetados para oferecer a melhor experiência, de forma confiável e 100% segura.
-          </p>
-  
-          <ul class="social-list">
-            <li>
-              <a href="https://www.youtube.com/" class="social-link" target="_blank">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://twitter.com/" class="social-link" target="_blank">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://www.facebook.com/share/p/1VN57H58Vv/" class="social-link" target="_blank">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://join.skype.com/" class="social-link" target="_blank">
-                <ion-icon name="logo-skype"></ion-icon>
-              </a>
-            </li>
-          </ul>
-          
-  
+        <div class="section-title">
+            <h2>Serviços Premium</h2>
+            <p>Soluções completas para escalar seu negócio com tráfego pago de alta conversão</p>
         </div>
-  
-        <ul class="footer-list">
-  
-          <li>
-            <p class="footer-list-title">Links Úteis</p>
-          </li>
-  
-          <li>
-            <a href="#" class="footer-link">Entre em contato</a>
-          </li>
-  
-          <li>
-            <a href="#" class="footer-link">Como funciona</a>
-          </li>
-  
-          <li>
-            <a href="#" class="footer-link">Criar</a>
-          </li>
-  
-          <li>
-            <a href="#" class="footer-link">Explorar</a>
-          </li>
-  
-          
-  
-        </ul>
-  
-        <ul class="footer-list">
-  
-          <li>
-            <p class="footer-list-title" >Comunidade</p>
-          </li>
-  
-          <li>
-            <a href="#" class="footer-link infcard" id="helpCenter">Central de Ajuda</a>
-          </li>
-  
-          <li>
-            <a href="#" class="footer-link infcard" id="partners" >Parceiros</a>
-          </li>
-  
-          <li>
-            <a href="#" class="footer-link infcard" id="suggestions" >Sugestões</a>
-          </li>
-  
-          <li>
-            <a href="#" class="footer-link infcard" id="blog-2" >Blog</a>
-          </li>
-  
-          <li>
-            <a href="#" class="footer-link infcard" id="newsletters">Boletins informativos</a>
-          </li>
-  
-        </ul>
-  
-        <ul class="footer-list">
-  
-          <li>
-            <p class="footer-list-title">Postagens no Instagram</p>
-          </li>
-  
-          <li>
-            <ul class="insta-post">
-  
-              <li>
-                <div class="insta-card">
-  
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-1.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-  
-                  <a href="https://www.instagram.com/netzage?igsh=MWZ5aG02MjNmamk5bw==" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-  
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Essencial</h3>
+                    <div class="price">Kz 200.000/mês</div>
+                    <p>Ideal para quem está começando</p>
                 </div>
-              </li>
-  
- 
-              <li>
-                <div class="insta-card">
-  
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-2.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-  
-                  <a href="https://www.instagram.com/netzage?igsh=MWZ5aG02MjNmamk5bw==" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-  
+                <div class="service-body">
+                    <ul>
+                        <li>Gestão de 1 campanha no Meta Ads</li>
+                        <li>Otimização semanal de anúncios</li>
+                        <li>Configuração básica de Pixel</li>
+                        <li>Relatório mensal de performance</li>
+                        <li>Suporte por e-mail</li>
+                    </ul>
                 </div>
-              </li>
-  
-              <li>
-                <div class="insta-card">
-  
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-3.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-  
-                  <a href="https://www.instagram.com/netzage?igsh=MWZ5aG02MjNmamk5bw==" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-  
+                <div class="service-footer">
+                    <a href="https://wa.me/938142738?text=Quero contratar o pacote Essencial" class="btn-whatsapp">Contratar via WhatsApp</a>
                 </div>
-              </li>
-  
-              <li>
-                <div class="insta-card">
-  
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-4.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-  
-                  <a href="https://www.instagram.com/netzage?igsh=MWZ5aG02MjNmamk5bw==" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-  
+            </div>
+            
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Avançado</h3>
+                    <div class="price">Kz 330.000/mês</div>
+                    <p>Para negócios em fase de crescimento</p>
                 </div>
-              </li>
-  
-              <li>
-                <div class="insta-card">
-  
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-5.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-  
-                  <a href="https://www.instagram.com/netzage?igsh=MWZ5aG02MjNmamk5bw==" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-  
+                <div class="service-body">
+                    <ul>
+                        <li>Gestão de até 3 campanhas (Meta + Google)</li>
+                        <li>Otimização diária de anúncios</li>
+                        <li>Configuração avançada de rastreamento</li>
+                        <li>Testes A/B contínuos</li>
+                        <li>Relatório semanal detalhado</li>
+                        <li>Suporte prioritário</li>
+                    </ul>
                 </div>
-              </li>
-  
-              <li>
-                <div class="insta-card">
-  
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-6.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-  
-                  <a href="https://www.instagram.com/netzage?igsh=MWZ5aG02MjNmamk5bw==" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-  
+                <div class="service-footer">
+                    <a href="https://wa.me/938142738?text=Quero contratar o pacote Avançado" class="btn-whatsapp">Contratar via WhatsApp</a>
                 </div>
-              </li>
-  
-            </ul>
-          </li>
-  
-        </ul>
-  
-      </div>
-  
-      <div class="footer-bottom">
-  
-        <p class="copyright">
-          &copy; 2024 NETZAGE. Todos os direitos reservados.
-        </p>
-  
-        <ul class="footer-bottom-list">
-  
-          <li>
-            <a href="#" id="notf1" class="footer-bottom-link">Termos e condições</a>
-          </li>
-  
-          <li>
-            <a href="#" id="notf2" class="footer-bottom-link">Política de privacidade</a>
-          </li>
-  
-          <li>
-            <a class="footer-bottom-link">Login / Cadastro</a>
-          </li>
-  
-        </ul>
-  
-      </div>
-  
+            </div>
+            
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Premium</h3>
+                    <div class="price">Kz 500.000/mês</div>
+                    <p>Solução completa para alta escala</p>
+                </div>
+                <div class="service-body">
+                    <ul>
+                        <li>Gestão completa de tráfego</li>
+                        <li>Estratégia multicanal (Meta, Google, TikTok)</li>
+                        <li>Landing Page otimizada</li>
+                        <li>Automações personalizadas</li>
+                        <li>Relatórios executivos diários</li>
+                        <li>Consultoria estratégica mensal</li>
+                        <li>Suporte 24/7</li>
+                    </ul>
+                </div>
+                <div class="service-footer">
+                    <a href="https://wa.me/938142738?text=Quero contratar o pacote Premium" class="btn-whatsapp">Contratar via WhatsApp</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
-  
+</section>
 
 
+    <!-- Tools Section -->
+    <section class="tools">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tecnologias que Utilizo</h2>
+                <p>Ferramentas premium para garantir os melhores resultados</p>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <p>Meta Ads</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <p>Google Ads</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <p>Tag Manager</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <p>Google Analytics</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <p>Figma</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <p>JavaScript</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <p>MySQL</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <p>UTM</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Results Section -->
+    <section class="results" id="results">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resultados Comprovados</h2>
+                <p>Números reais que impactaram negócios dos meus clientes</p>
+            </div>
+            
+            <div class="results-content">
+                <div class="results-text">
+                    <h3>Transformando investimento em retorno</h3>
+                    <p>Minhas estratégias não são baseadas em achismos, mas em dados concretos que comprovam eficiência. Cada real investido em tráfego deve ser rastreável e justificável.</p>
+                    <p>Veja alguns exemplos de resultados alcançados para clientes em diferentes nichos:</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="number">5x</div>
+                            <p>Aumento no ROI médio</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">-40%</div>
+                            <p>Redução no Custo por Lead</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">300%</div>
+                            <p>Aumento no ticket médio</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">12h</div>
+                            <p>Tempo médio para primeira venda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-image">
+                    <img src="assets/image.png" alt="Gráficos de Resultados">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 
-    - #BACK TO TOP
-  -->
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Depoimentos</h2>
+                <p>O que meus clientes dizem sobre o trabalho</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "O Pascoal transformou completamente nossa estratégia digital. Em 3 meses, reduzimos nosso CPA em 60% enquanto aumentávamos o volume de vendas. Sua capacidade técnica faz toda diferença!"
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/clientes/man2.jpg" alt="Cliente 1">
+                        <div class="author-info">
+                            <h4>Ricardo Silva</h4>
+                            <p>CEO - Empresa X</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Finalmente encontrei um profissional que entende tanto de tráfego quanto de programação. As automações que ele implementou pouparam centenas de horas de trabalho manual."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/clientes/girl2.jpg" alt="Cliente 2">
+                        <div class="author-info">
+                            <h4>Ana Paula Mendes</h4>
+                            <p>Diretora de Marketing</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Trabalho com vários gestores de tráfego, mas o Pascoal se destaca pela visão estratégica. Ele não só gerencia campanhas, mas pensa no negócio como um todo. Resultado: 5x mais vendas com o mesmo orçamento."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/clientes/man.jpg" alt="Cliente 3">
+                        <div class="author-info">
+                            <h4>Carlos Eduardo</h4>
+                            <p>Empreendedor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
-  </a>
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas sobre como trabalhamos</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quanto tempo leva para ver resultados?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Os primeiros sinais de otimização geralmente aparecem em 7-14 dias, mas resultados consistentes levam em média 30-60 dias. Depende muito do estágio atual do seu negócio e da qualidade da sua oferta.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Você oferece garantia de resultados?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nenhum profissional sério pode garantir resultados em marketing digital, pois muitos fatores estão fora do nosso controle (qualidade da oferta, mercado, sazonalidade etc). Porém, garanto trabalho dedicado, transparência total e otimização constante para maximizar seu ROI.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como funciona o processo de trabalho?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>1. Diagnóstico completo do seu negócio<br>
+                        2. Definição de metas e KPIs<br>
+                        3. Implementação técnica (pixels, tags, conversões)<br>
+                        4. Criação e lançamento de campanhas<br>
+                        5. Otimização diária/semanal<br>
+                        6. Relatórios e ajustes estratégicos</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Preciso ter um site ou landing page?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, é essencial. Caso não tenha, posso ajudar no desenvolvimento de uma landing page otimizada para conversões (serviço incluso no pacote Premium).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Qual o formato de contrato?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Trabalho com contratos mensais com fidelidade mínima de 3 meses (tempo necessário para otimizações consistentes). Após esse período, pode ser cancelado a qualquer momento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Está pronto para escalar suas vendas?</h2>
+            <p>Com um profissional que entende estratégia, código e resultado?</p>
+            <a href="https://wa.me/938142738" class="btn-dark">Clique aqui e negocie comigo agora via WhatsApp</a>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Pascoal Zage</h3>
+                    <p>Gestor de Tráfego Pago & Programador com foco em Vendas, ROI e Crescimento de Negócios.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#">Gestão de Tráfego</a></li>
+                        <li><a href="#">Programação para Marketing</a></li>
+                        <li><a href="#">Consultoria Estratégica</a></li>
+                        <li><a href="#">Automações Personalizadas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="mailto:pascoalzage54@gmail.com">contato@pascoalzage.com</a></li>
+                        <li><a href="tel:+244938142738">+244 938 142 738</a></li>
+                        <li><a href="https://wa.me/938142738">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Pascoal Zage. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/938142738" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js" defer></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <!-- script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var snowflakesContainer = document.createElement('div');
-      snowflakesContainer.classList.add('snowflakes');
-      document.body.appendChild(snowflakesContainer);
-
-      // Gerar flocos de neve
-      for (let i = 0; i < 50; i++) { // Aumentando a quantidade de flocos para um efeito mais intenso
-        var snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        snowflake.innerHTML = '❄';
-
-        // Posição aleatória horizontal
-        snowflake.style.left = Math.random() * 100 + 'vw';
-        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's'; // Tempo de queda aleatório
-        snowflake.style.animationDelay = Math.random() * 5 + 's'; // Delay aleatório para flocos começarem em momentos diferentes
-
-        snowflakesContainer.appendChild(snowflake);
-      }
-    });
-</script-->
+   <script src="assets/script.js"></script>
 </body>
-
 </html>
-
- 
- 
