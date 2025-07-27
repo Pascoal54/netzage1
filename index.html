@@ -1,315 +1,560 @@
-  <!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pascoal Zage | Gestor de Tráfego & Programador Fullstack</title>
+    <title>Pascoal Zage | Especialista em Performance Digital</title>
+    <meta name="description" content="Gestor de Tráfego especializado em conversões com expertise técnica em programação. Estratégias data-driven para escalar negócios digitais.">
+    <!-- Preconnect para melhor performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fontes premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- <link rel="stylesheet" href="assets/style.css">
- <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon">
+    <!-- Animações -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
+    </div>
+
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">Pascoal<span>Zage</span></a>
-            <nav>
+            <a href="#" class="logo" data-aos="fade-down">Pascoal<span>Zage</span></a>
+            <nav id="nav">
                 <ul>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#results">Resultados</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#methodology" class="nav-link">Metodologia</a></li>
+                    <li><a href="#services" class="nav-link">Serviços</a></li>
+                    <li><a href="#results" class="nav-link">Resultados</a></li>
+                    <li><a href="#cases" class="nav-link">Cases</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
-            <a href="https://wa.me/938142738" class="btn-whatsapp">Negociar Serviço</a>
+            <a href="https://wa.me/244921500330" class="btn-whatsapp pulse" data-aos="fade-down" data-aos-delay="300">Negociar Serviço</a>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-particles" id="particles-js"></div>
         <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Pascoal Zage – <span>Gestor de Tráfego e Programador Fullstack</span></h1>
-                <p>Crio estratégias que conectam anúncios a resultados. Da programação ao lucro.</p>
-                <a href="https://wa.me/938142738" class="btn-primary">Vamos conversar agora</a>
+            <div class="hero-text" data-aos="fade-right" data-aos-delay="100">
+                <h6 class="subtitle">ESPECIALISTA EM PERFORMANCE DIGITAL</h6>
+                <h1>Pascoal <span>Zage</span></h1>
+                <h2>Gestão de Tráfego <span class="typed-text" id="typed"></span></h2>
+                <p class="hero-description">Combino expertise técnica em programação com estratégias de aquisição baseadas em dados para entregar <strong>resultados previsíveis e escaláveis</strong>.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary mr-20">Fale com o Especialista</a>
+                    <a href="#cases" class="btn-outline">Ver Cases</a>
+                </div>
+                <div class="hero-badges">
+                    <div class="badge">
+                        <i class="fas fa-medal"></i>
+                        <span>5+ Anos de Experiência</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>50+ Projetos</span>
+                    </div>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/pascoalzage.jpg" alt="Pascoal Zage">
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+                <div class="image-wrapper">
+                    <img src="assets/pascoalzage.jpg" alt="Pascoal Zage - Especialista em Gestão de Tráfego" class="profile-image">
+                    <div class="image-badge">
+                        <div class="badge-content">
+                            <span class="number">87%</span>
+                            <span class="text">Taxa de Sucesso</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-down">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Clients Logos -->
+    <section class="clients">
+        <div class="container">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <div class="client-logo"><img src="assets/clients/client1.png" alt="Client 1"></div>
+                    <div class="client-logo"><img src="assets/clients/client2.png" alt="Client 2"></div>
+                    <div class="client-logo"><img src="assets/clients/client3.png" alt="Client 3"></div>
+                    <div class="client-logo"><img src="assets/clients/client4.png" alt="Client 4"></div>
+                    <div class="client-logo"><img src="assets/clients/client5.png" alt="Client 5"></div>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <div class="client-logo"><img src="assets/clients/client1.png" alt="Client 1"></div>
+                    <div class="client-logo"><img src="assets/clients/client2.png" alt="Client 2"></div>
+                    <div class="client-logo"><img src="assets/clients/client3.png" alt="Client 3"></div>
+                    <div class="client-logo"><img src="assets/clients/client4.png" alt="Client 4"></div>
+                    <div class="client-logo"><img src="assets/clients/client5.png" alt="Client 5"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about section-padding" id="about">
         <div class="container">
-            <div class="section-title">
-                <h2>O Que Me Diferencia</h2>
-                <p>Combinando expertise técnica em programação com visão estratégica de marketing para entregar resultados mensuráveis</p>
+            <div class="section-title" data-aos="fade-up">
+                <h6 class="subtitle">DIFERENCIAIS ESTRATÉGICOS</h6>
+                <h2>Por Que Me Escolher Como Seu <span>Gestor de Tráfego</span></h2>
+                <p class="section-description">Na interseção entre tecnologia e marketing, crio sistemas de aquisição de clientes que funcionam 24/7.</p>
             </div>
+            
             <div class="about-content">
-                <div class="about-text">
-                    <h3>Transformando tráfego em receita com tecnologia e estratégia</h3>
-                    <p>Com mais de 5 anos de experiência no mercado digital, ajudo empresas a escalarem suas vendas através da combinação perfeita entre anúncios precisos e automações inteligentes.</p>
-                    <p>Minha abordagem vai além da simples gestão de campanhas - integro tecnologia, análise de dados e psicologia de vendas para criar máquinas de crescimento contínuo.</p>
+                <div class="about-image" data-aos="fade-right">
+                    <img src="assets/data-analysis.jpg" alt="Análise de dados e performance" class="about-main-image">
+                    <div class="experience-badge" data-aos="zoom-in" data-aos-delay="500">
+                        <span class="years">5+</span>
+                        <span class="text">Anos Transformando Tráfego em Receita</span>
+                    </div>
+                </div>
+                
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Gestão de Tráfego com <span>Precisão Científica</span> e <span>Arte da Conversão</span></h3>
+                    <p>Minha abordagem vai além da simples otimização de campanhas. Como programador e estrategista, desenvolvo <strong>sistemas completos de aquisição de clientes</strong> que integram:</p>
                     
-                    <div class="skills">
-                        <div class="skill-item">
-                            <h4>Especialista em Meta Ads e Google Ads</h4>
-                            <p>Domínio completo das principais plataformas de anúncios para maximizar seu ROI</p>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="skill-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="skill-content">
+                                <h4>Automações Avançadas</h4>
+                                <p>Fluxos personalizados que reduzem custos operacionais e aumentam eficiência</p>
+                            </div>
                         </div>
-                        <div class="skill-item">
-                            <h4>Integrações avançadas</h4>
-                            <p>Pixel, Tag Manager, UTM e APIs para rastreamento preciso de conversões</p>
+                        
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="skill-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="skill-content">
+                                <h4>Arquitetura de Dados</h4>
+                                <p>Configuração precisa de pixels, APIs e rastreamento multicanal</p>
+                            </div>
                         </div>
-                        <div class="skill-item">
-                            <h4>Capacidade técnica em programação</h4>
-                            <p>Automações personalizadas que eliminam gargalos e aumentam eficiência</p>
+                        
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="skill-content">
+                                <h4>Inteligência Artificial</h4>
+                                <p>Utilização de machine learning para prever e otimizar desempenho</p>
+                            </div>
                         </div>
-                        <div class="skill-item">
-                            <h4>Foco absoluto em vendas</h4>
-                            <p>Todas as métricas são importantes, mas o que realmente importa é o lucro no seu caixa</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Estratégias personalizadas</h4>
-                            <p>Soluções sob medida para cada nicho e estágio do negócio</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Visão de negócio</h4>
-                            <p>Entendo seu modelo de receita para otimizar cada etapa do funil</p>
+                        
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-network"></i>
+                            </div>
+                            <div class="skill-content">
+                                <h4>Estratégias Omnichannel</h4>
+                                <p>Integração perfeita entre múltiplos canais de aquisição</p>
+                            </div>
                         </div>
                     </div>
+                    
+                    <a href="#methodology" class="btn-outline">Conheça Minha Metodologia</a>
                 </div>
             </div>
         </div>
     </section>
 
-   
-    <!-- Services Section -->
-<section class="services" id="services">
-    <div class="container">
-        <div class="section-title">
-            <h2>Serviços Premium</h2>
-            <p>Soluções completas para escalar seu negócio com tráfego pago de alta conversão</p>
-        </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Essencial</h3>
-                    <div class="price">Kz 200.000/mês</div>
-                    <p>Ideal para quem está começando</p>
-                </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Gestão de 1 campanha no Meta Ads</li>
-                        <li>Otimização semanal de anúncios</li>
-                        <li>Configuração básica de Pixel</li>
-                        <li>Relatório mensal de performance</li>
-                        <li>Suporte por e-mail</li>
-                    </ul>
-                </div>
-                <div class="service-footer">
-                    <a href="https://wa.me/938142738?text=Quero contratar o pacote Essencial" class="btn-whatsapp">Contratar via WhatsApp</a>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Avançado</h3>
-                    <div class="price">Kz 330.000/mês</div>
-                    <p>Para negócios em fase de crescimento</p>
-                </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Gestão de até 3 campanhas (Meta + Google)</li>
-                        <li>Otimização diária de anúncios</li>
-                        <li>Configuração avançada de rastreamento</li>
-                        <li>Testes A/B contínuos</li>
-                        <li>Relatório semanal detalhado</li>
-                        <li>Suporte prioritário</li>
-                    </ul>
-                </div>
-                <div class="service-footer">
-                    <a href="https://wa.me/938142738?text=Quero contratar o pacote Avançado" class="btn-whatsapp">Contratar via WhatsApp</a>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Premium</h3>
-                    <div class="price">Kz 500.000/mês</div>
-                    <p>Solução completa para alta escala</p>
-                </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Gestão completa de tráfego</li>
-                        <li>Estratégia multicanal (Meta, Google, TikTok)</li>
-                        <li>Landing Page otimizada</li>
-                        <li>Automações personalizadas</li>
-                        <li>Relatórios executivos diários</li>
-                        <li>Consultoria estratégica mensal</li>
-                        <li>Suporte 24/7</li>
-                    </ul>
-                </div>
-                <div class="service-footer">
-                    <a href="https://wa.me/938142738?text=Quero contratar o pacote Premium" class="btn-whatsapp">Contratar via WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Tools Section -->
-    <section class="tools">
+    <!-- Methodology Section -->
+    <section class="methodology section-padding" id="methodology">
         <div class="container">
-            <div class="section-title">
-                <h2>Tecnologias que Utilizo</h2>
-                <p>Ferramentas premium para garantir os melhores resultados</p>
+            <div class="section-title" data-aos="fade-up">
+                <h6 class="subtitle">PROCESSO COMPROVADO</h6>
+                <h2>Como Transformo <span>Tráfego em Receita</span></h2>
+                <p class="section-description">Um framework científico para crescimento previsível e escalável.</p>
             </div>
             
-            <div class="tools-grid">
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-facebook"></i>
+            <div class="methodology-steps">
+                <div class="step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Diagnóstico Profundo</h3>
+                        <p>Análise completa do modelo de negócios, concorrência e desempenho atual para identificar oportunidades ocultas.</p>
+                        <ul class="step-features">
+                            <li>Auditoria de contas de anúncios</li>
+                            <li>Análise de concorrência</li>
+                            <li>Mapeamento de jornada do cliente</li>
+                        </ul>
                     </div>
-                    <p>Meta Ads</p>
                 </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-google"></i>
+                
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Implementação Técnica</h3>
+                        <p>Configuração avançada de infraestrutura de rastreamento e automações para garantir dados confiáveis.</p>
+                        <ul class="step-features">
+                            <li>Implementação de pixels e tags</li>
+                            <li>Configuração de eventos customizados</li>
+                            <li>Integrações com CRM e APIs</li>
+                        </ul>
                     </div>
-                    <p>Google Ads</p>
                 </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-tags"></i>
+                
+                <div class="step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Estratégia Multicanal</h3>
+                        <p>Desenvolvimento de campanhas segmentadas que conversam com cada etapa do funil de vendas.</p>
+                        <ul class="step-features">
+                            <li>Seleção de canais estratégicos</li>
+                            <li>Criação de audiências personalizadas</li>
+                            <li>Sequências de remarketing</li>
+                        </ul>
                     </div>
-                    <p>Tag Manager</p>
                 </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-chart-line"></i>
+                
+                <div class="step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Otimização Contínua</h3>
+                        <p>Processo sistemático de testes e refinamento para maximizar ROI e reduzir custos de aquisição.</p>
+                        <ul class="step-features">
+                            <li>Testes A/B multivariados</li>
+                            <li>Otimização algorítmica</li>
+                            <li>Análise preditiva</li>
+                        </ul>
                     </div>
-                    <p>Google Analytics</p>
                 </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-figma"></i>
+            </div>
+            
+            <div class="methodology-cta" data-aos="zoom-in" data-aos-delay="500">
+                <h3>Pronto para implementar um sistema de aquisição que escala seu negócio?</h3>
+                <a href="https://wa.me/244921500330" class="btn-primary">Agendar Consultoria</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h6 class="subtitle">SOLUÇÕES PREMIUM</h6>
+                <h2>Serviços de <span>Alta Performance</span></h2>
+                <p class="section-description">Estratégias personalizadas para cada estágio do seu negócio.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-header">
+                        <h3>Essencial</h3>
+                        <div class="price">Kz 200.000<span>/mês</span></div>
+                        <p>Ideal para negócios em validação</p>
                     </div>
-                    <p>Figma</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-js"></i>
+                    <div class="service-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Gestão de 1 campanha no Meta Ads</li>
+                            <li><i class="fas fa-check"></i> Otimização semanal de anúncios</li>
+                            <li><i class="fas fa-check"></i> Configuração básica de Pixel</li>
+                            <li><i class="fas fa-check"></i> Relatório mensal de performance</li>
+                            <li><i class="fas fa-check"></i> Suporte por e-mail</li>
+                        </ul>
                     </div>
-                    <p>JavaScript</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-database"></i>
+                    <div class="service-footer">
+                        <a href="https://wa.me/244921500330?text=Quero contratar o pacote Essencial" class="btn-outline">Contratar</a>
                     </div>
-                    <p>MySQL</p>
+                    <div class="service-badge">Popular</div>
                 </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-code-branch"></i>
+                
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-header">
+                        <h3>Avançado</h3>
+                        <div class="price">Kz 330.000<span>/mês</span></div>
+                        <p>Para negócios em crescimento</p>
                     </div>
-                    <p>UTM</p>
+                    <div class="service-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Gestão de até 3 campanhas</li>
+                            <li><i class="fas fa-check"></i> Otimização diária de anúncios</li>
+                            <li><i class="fas fa-check"></i> Configuração avançada de rastreamento</li>
+                            <li><i class="fas fa-check"></i> Testes A/B contínuos</li>
+                            <li><i class="fas fa-check"></i> Relatório semanal detalhado</li>
+                            <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                        </ul>
+                    </div>
+                    <div class="service-footer">
+                        <a href="https://wa.me/244921500330?text=Quero contratar o pacote Avançado" class="btn-primary">Contratar</a>
+                    </div>
+                    <div class="service-badge">Recomendado</div>
                 </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-header">
+                        <h3>Premium</h3>
+                        <div class="price">Kz 500.000<span>/mês</span></div>
+                        <p>Solução completa para alta escala</p>
+                    </div>
+                    <div class="service-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Gestão completa de tráfego</li>
+                            <li><i class="fas fa-check"></i> Estratégia multicanal</li>
+                            <li><i class="fas fa-check"></i> Landing Page otimizada</li>
+                            <li><i class="fas fa-check"></i> Automações personalizadas</li>
+                            <li><i class="fas fa-check"></i> Relatórios executivos diários</li>
+                            <li><i class="fas fa-check"></i> Consultoria estratégica mensal</li>
+                            <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                        </ul>
+                    </div>
+                    <div class="service-footer">
+                        <a href="https://wa.me/244921500330?text=Quero contratar o pacote Premium" class="btn-outline">Contratar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="custom-solution" data-aos="fade-up" data-aos-delay="400">
+                <div class="custom-content">
+                    <h3>Precisa de uma solução personalizada?</h3>
+                    <p>Para negócios com necessidades específicas ou orçamentos diferenciados.</p>
+                </div>
+                <a href="https://wa.me/244921500330" class="btn-outline">Fale Diretamente Comigo</a>
             </div>
         </div>
     </section>
 
     <!-- Results Section -->
-    <section class="results" id="results">
+    <section class="results section-padding" id="results">
         <div class="container">
-            <div class="section-title">
-                <h2>Resultados Comprovados</h2>
-                <p>Números reais que impactaram negócios dos meus clientes</p>
+            <div class="section-title" data-aos="fade-up">
+                <h6 class="subtitle">IMPACTO MENSURÁVEL</h6>
+                <h2>Resultados que <span>Transformam Negócios</span></h2>
+                <p class="section-description">Dados reais de projetos recentes.</p>
             </div>
             
-            <div class="results-content">
-                <div class="results-text">
-                    <h3>Transformando investimento em retorno</h3>
-                    <p>Minhas estratégias não são baseadas em achismos, mas em dados concretos que comprovam eficiência. Cada real investido em tráfego deve ser rastreável e justificável.</p>
-                    <p>Veja alguns exemplos de resultados alcançados para clientes em diferentes nichos:</p>
-                    
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="number">5x</div>
-                            <p>Aumento no ROI médio</p>
-                        </div>
-                        <div class="stat-item">
-                            <div class="number">-40%</div>
-                            <p>Redução no Custo por Lead</p>
-                        </div>
-                        <div class="stat-item">
-                            <div class="number">300%</div>
-                            <p>Aumento no ticket médio</p>
-                        </div>
-                        <div class="stat-item">
-                            <div class="number">12h</div>
-                            <p>Tempo médio para primeira venda</p>
-                        </div>
+            <div class="results-grid">
+                <div class="result-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="result-number">
+                        <span class="counter" data-target="312">0</span>%
+                    </div>
+                    <div class="result-text">
+                        <h4>Aumento no ROI</h4>
+                        <p>E-commerce de moda em 90 dias</p>
                     </div>
                 </div>
-                <div class="results-image">
-                    <img src="assets/image.png" alt="Gráficos de Resultados">
+                
+                <div class="result-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="result-number">
+                        <span class="counter" data-target="57">0</span>%
+                    </div>
+                    <div class="result-text">
+                        <h4>Redução no CPA</h4>
+                        <p>Clínica médica especializada</p>
+                    </div>
                 </div>
+                
+                <div class="result-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="result-number">
+                        <span class="counter" data-target="4.8">0</span>x
+                    </div>
+                    <div class="result-text">
+                        <h4>Retorno sobre Ad Spend</h4>
+                        <p>Software B2B em campanhas LinkedIn</p>
+                    </div>
+                </div>
+                
+                <div class="result-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="result-number">
+                        <span class="counter" data-target="1200">0</span>+
+                    </div>
+                    <div class="result-text">
+                        <h4>Leads Qualificados</h4>
+                        <p>Imobiliária premium em 30 dias</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-cta" data-aos="fade-up" data-aos-delay="500">
+                <h3>Esses resultados podem ser replicados no seu negócio</h3>
+                <a href="#contact" class="btn-primary">Quero Resultados Similares</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="cases section-padding" id="cases">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h6 class="subtitle">CASES DE SUCESSO</h6>
+                <h2>Projetos <span>Realizados</span></h2>
+                <p class="section-description">Alguns exemplos de transformação digital que lideramos.</p>
+            </div>
+            
+            <div class="cases-grid">
+                <div class="case-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="case-image">
+                        <img src="assets/cases/ecommerce.jpg" alt="E-commerce de Moda">
+                        <div class="case-overlay">
+                            <div class="case-result">
+                                <span>+312% ROI</span>
+                                <span>em 90 dias</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3>E-commerce de Moda Premium</h3>
+                        <p>Implementação de estratégia multicanal com remarketing dinâmico e automações personalizadas.</p>
+                        <a href="#" class="case-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="case-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="case-image">
+                        <img src="assets/cases/software.jpg" alt="Software B2B">
+                        <div class="case-overlay">
+                            <div class="case-result">
+                                <span>4.8x ROAS</span>
+                                <span>em campanhas LinkedIn</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3>Software B2B para Gestão</h3>
+                        <p>Estratégia de account-based marketing com segmentação por intent data.</p>
+                        <a href="#" class="case-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="case-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="case-image">
+                        <img src="assets/cases/clinica.jpg" alt="Clínica Médica">
+                        <div class="case-overlay">
+                            <div class="case-result">
+                                <span>-57% CPA</span>
+                                <span>em 60 dias</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3>Clínica Médica Especializada</h3>
+                        <p>Otimização de campanhas de saúde com foco em compliance e alta conversão.</p>
+                        <a href="#" class="case-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cases-cta" data-aos="fade-up" data-aos-delay="400">
+                <p>Esses são apenas alguns exemplos. Tenho mais de 50 projetos entregues com sucesso.</p>
+                <a href="#contact" class="btn-outline">Quero Meu Case de Sucesso</a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
+    <section class="testimonials section-padding">
         <div class="container">
-            <div class="section-title">
-                <h2>Depoimentos</h2>
-                <p>O que meus clientes dizem sobre o trabalho</p>
+            <div class="section-title" data-aos="fade-up">
+                <h6 class="subtitle">RECONHECIMENTO</h6>
+                <h2>O Que Meus <span>Clientes Dizem</span></h2>
+                <p class="section-description">Depoimentos reais de parceiros de negócios.</p>
             </div>
             
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "O Pascoal transformou completamente nossa estratégia digital. Em 3 meses, reduzimos nosso CPA em 60% enquanto aumentávamos o volume de vendas. Sua capacidade técnica faz toda diferença!"
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/clientes/man2.jpg" alt="Cliente 1">
-                        <div class="author-info">
-                            <h4>Ricardo Silva</h4>
-                            <p>CEO - Empresa X</p>
+            <div class="testimonials-slider">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"O Pascoal transformou completamente nossa estratégia digital. Em 3 meses, reduzimos nosso CPA em 60% enquanto aumentávamos o volume de vendas. Sua capacidade técnica faz toda diferença!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/clientes/man2.jpg" alt="Ricardo Silva">
+                            </div>
+                            <div class="author-info">
+                                <h4>Ricardo Silva</h4>
+                                <p>CEO - Empresa X</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Finalmente encontrei um profissional que entende tanto de tráfego quanto de programação. As automações que ele implementou pouparam centenas de horas de trabalho manual."
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/clientes/girl2.jpg" alt="Cliente 2">
-                        <div class="author-info">
-                            <h4>Ana Paula Mendes</h4>
-                            <p>Diretora de Marketing</p>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"Finalmente encontrei um profissional que entende tanto de tráfego quanto de programação. As automações que ele implementou pouparam centenas de horas de trabalho manual."</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/clientes/girl2.jpg" alt="Ana Paula Mendes">
+                            </div>
+                            <div class="author-info">
+                                <h4>Ana Paula Mendes</h4>
+                                <p>Diretora de Marketing</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Trabalho com vários gestores de tráfego, mas o Pascoal se destaca pela visão estratégica. Ele não só gerencia campanhas, mas pensa no negócio como um todo. Resultado: 5x mais vendas com o mesmo orçamento."
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/clientes/man.jpg" alt="Cliente 3">
-                        <div class="author-info">
-                            <h4>Carlos Eduardo</h4>
-                            <p>Empreendedor</p>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"Trabalho com vários gestores de tráfego, mas o Pascoal se destaca pela visão estratégica. Ele não só gerencia campanhas, mas pensa no negócio como um todo. Resultado: 5x mais vendas com o mesmo orçamento."</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/clientes/man.jpg" alt="Carlos Eduardo">
+                            </div>
+                            <div class="author-info">
+                                <h4>Carlos Eduardo</h4>
+                                <p>Empreendedor</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -318,66 +563,82 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq" id="faq">
+    <section class="faq section-padding">
         <div class="container">
-            <div class="section-title">
-                <h2>Perguntas Frequentes</h2>
-                <p>Tire suas dúvidas sobre como trabalhamos</p>
+            <div class="section-title" data-aos="fade-up">
+                <h6 class="subtitle">TIRE SUAS DÚVIDAS</h6>
+                <h2>Perguntas <span>Frequentes</span></h2>
+                <p class="section-description">Respostas para as questões mais comuns.</p>
             </div>
             
-            <div class="faq-container">
-                <div class="faq-item">
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="faq-question">
-                        <span>Quanto tempo leva para ver resultados?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <h3>Quanto tempo leva para ver resultados?</h3>
+                        <div class="faq-toggle">
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                     <div class="faq-answer">
-                        <p>Os primeiros sinais de otimização geralmente aparecem em 7-14 dias, mas resultados consistentes levam em média 30-60 dias. Depende muito do estágio atual do seu negócio e da qualidade da sua oferta.</p>
+                        <p>Os primeiros sinais de otimização geralmente aparecem em 7-14 dias, mas resultados consistentes levam em média 30-60 dias. Depende muito do estágio atual do seu negócio, qualidade da sua oferta e nível de concorrência no mercado. Implementamos um processo de otimização contínua que vai refinando os resultados ao longo do tempo.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="faq-question">
-                        <span>Você oferece garantia de resultados?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <h3>Você oferece garantia de resultados?</h3>
+                        <div class="faq-toggle">
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                     <div class="faq-answer">
-                        <p>Nenhum profissional sério pode garantir resultados em marketing digital, pois muitos fatores estão fora do nosso controle (qualidade da oferta, mercado, sazonalidade etc). Porém, garanto trabalho dedicado, transparência total e otimização constante para maximizar seu ROI.</p>
+                        <p>Nenhum profissional sério pode garantir resultados em marketing digital, pois muitos fatores estão fora do nosso controle (qualidade da oferta, mercado, sazonalidade etc). Porém, garanto trabalho dedicado, transparência total e otimização constante para maximizar seu ROI. Meu compromisso é fazer tudo que está ao meu alcance para entregar os melhores resultados possíveis para seu negócio.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="faq-question">
-                        <span>Como funciona o processo de trabalho?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <h3>Como funciona o processo de trabalho?</h3>
+                        <div class="faq-toggle">
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                     <div class="faq-answer">
-                        <p>1. Diagnóstico completo do seu negócio<br>
-                        2. Definição de metas e KPIs<br>
-                        3. Implementação técnica (pixels, tags, conversões)<br>
-                        4. Criação e lançamento de campanhas<br>
-                        5. Otimização diária/semanal<br>
-                        6. Relatórios e ajustes estratégicos</p>
+                        <p>1. <strong>Diagnóstico completo</strong> - Análise detalhada do seu negócio, concorrência e desempenho atual<br>
+                        2. <strong>Definição de metas e KPIs</strong> - Estabelecemos indicadores claros de sucesso<br>
+                        3. <strong>Implementação técnica</strong> - Configuração de pixels, tags, conversões e automações<br>
+                        4. <strong>Criação e lançamento de campanhas</strong> - Desenvolvimento de estratégias multicanal<br>
+                        5. <strong>Otimização diária/semanal</strong> - Ajustes baseados em dados e testes contínuos<br>
+                        6. <strong>Relatórios e ajustes estratégicos</strong> - Transparência total e refinamento constante</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="faq-question">
-                        <span>Preciso ter um site ou landing page?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <h3>Preciso ter um site ou landing page?</h3>
+                        <div class="faq-toggle">
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                     <div class="faq-answer">
-                        <p>Sim, é essencial. Caso não tenha, posso ajudar no desenvolvimento de uma landing page otimizada para conversões (serviço incluso no pacote Premium).</p>
+                        <p>Sim, é essencial ter pelo menos uma landing page otimizada para conversões. Caso não tenha, posso ajudar no desenvolvimento de uma página altamente convertível (serviço incluso no pacote Premium). A qualidade da sua página de destino é um fator crítico para o sucesso das campanhas, por isso damos tanta atenção a esse elemento.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
                     <div class="faq-question">
-                        <span>Qual o formato de contrato?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <h3>Qual o formato de contrato?</h3>
+                        <div class="faq-toggle">
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                     <div class="faq-answer">
-                        <p>Trabalho com contratos mensais com fidelidade mínima de 3 meses (tempo necessário para otimizações consistentes). Após esse período, pode ser cancelado a qualquer momento.</p>
+                        <p>Trabalho com contratos mensais com fidelidade mínima de 3 meses (tempo necessário para otimizações consistentes). Após esse período, pode ser cancelado a qualquer momento. O pagamento é realizado no início de cada ciclo mensal. Para projetos específicos ou campanhas pontuais, podemos discutir um escopo e formato personalizados.</p>
                     </div>
                 </div>
             </div>
@@ -385,56 +646,169 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta section-padding">
         <div class="container">
-            <h2>Está pronto para escalar suas vendas?</h2>
-            <p>Com um profissional que entende estratégia, código e resultado?</p>
-            <a href="https://wa.me/938142738" class="btn-dark">Clique aqui e negocie comigo agora via WhatsApp</a>
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Pronto para <span>Escalar Seu Negócio</span> com Tráfego de Alta Conversão?</h2>
+                <p>Agende uma consultoria estratégica e descubra como podemos impulsionar seus resultados.</p>
+                <a href="https://wa.me/244921500330" class="btn-primary pulse">Falar com Especialista</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h6 class="subtitle">VAMOS CONVERSAR</h6>
+                <h2>Entre em <span>Contato</span></h2>
+                <p class="section-description">Estou pronto para ajudar seu negócio a alcançar novos patamares.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <a href="mailto:contato@pascoalzage.com">contato@pascoalzage.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Telefone</h4>
+                            <a href="tel:+244921500330">+244 921 500 330</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/244921500330">Enviar Mensagem</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Localização</h4>
+                            <span>Angola</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Seu Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Seu Telefone">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" required>
+                                <option value="" disabled selected>Assunto</option>
+                                <option value="Gestão de Tráfego">Gestão de Tráfego</option>
+                                <option value="Consultoria">Consultoria</option>
+                                <option value="Orçamento">Orçamento</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Pascoal Zage</h3>
-                    <p>Gestor de Tráfego Pago & Programador com foco em Vendas, ROI e Crescimento de Negócios.</p>
+                    <a href="#" class="logo">Pascoal<span>Zage</span></a>
+                    <p class="footer-about">Especialista em Performance Digital combinando expertise técnica em programação com estratégias de aquisição baseadas em dados.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                
                 <div class="footer-column">
                     <h3>Serviços</h3>
                     <ul>
-                        <li><a href="#">Gestão de Tráfego</a></li>
-                        <li><a href="#">Programação para Marketing</a></li>
-                        <li><a href="#">Consultoria Estratégica</a></li>
-                        <li><a href="#">Automações Personalizadas</a></li>
+                        <li><a href="#services">Gestão de Tráfego</a></li>
+                        <li><a href="#services">Programação para Marketing</a></li>
+                        <li><a href="#services">Consultoria Estratégica</a></li>
+                        <li><a href="#services">Automações Personalizadas</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Contato</h3>
+                    <h3>Links Úteis</h3>
                     <ul>
-                        <li><a href="mailto:pascoalzage54@gmail.com">contato@pascoalzage.com</a></li>
-                        <li><a href="tel:+244938142738">+244 938 142 738</a></li>
-                        <li><a href="https://wa.me/938142738">WhatsApp</a></li>
+                        <li><a href="#about">Sobre Mim</a></li>
+                        <li><a href="#methodology">Metodologia</a></li>
+                        <li><a href="#cases">Cases de Sucesso</a></li>
+                        <li><a href="#contact">Contato</a></li>
                     </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Inscreva-se para receber insights exclusivos sobre marketing digital.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 Pascoal Zage. Todos os direitos reservados.</p>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; <span id="year"></span> Pascoal Zage. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Termos de Serviço</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/938142738" class="whatsapp-float">
+    <a href="https://wa.me/244921500330" class="whatsapp-float pulse">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-   <script src="assets/script.js"></script>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
