@@ -1,86 +1,134 @@
- <!DOCTYPE html>
-<html lang="pt-BR">
+  <!DOCTYPE html>
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pascoal Zage | Gestor de Tráfego & Programador Fullstack</title>
+    <title>Tráfego Pago Pro - 21 Dezembro | Treinamento Intensivo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- <link rel="stylesheet" href="assets/style.css">
- <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon">
+    <!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+<!-- EmailJS (será carregado dinamicamente se necessário) -->
+<!-- jsPDF (será carregado dinamicamente se necessário) -->
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="#" class="logo">Pascoal<span>Zage</span></a>
-            <nav>
-                <ul>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#results">Resultados</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-            <a href="https://wa.me/930620876" class="btn-whatsapp">Negociar Serviço</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo">
+                <i class="fas fa-chart-line"></i> Tráfego Pago Pro
+            </a>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Sobre o Treinamento</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link">Planos</a></li>
+                <li class="nav-item"><a href="#benefits" class="nav-link">Benefícios</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">Perguntas Frequentes</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link nav-cta">Garantir Vaga </a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Pascoal Zage – <span>Gestor de Tráfego e Programador Fullstack</span></h1>
-                <p>Crio estratégias que conectam anúncios a resultados. Da programação ao lucro.</p>
-                <a href="https://wa.me/930620876" class="btn-primary">Vamos conversar agora</a>
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Domine o Tráfego Pago(Meta ads) em Apenas 1 Dia e Saia Pronto Para Atuar no Mercado Digital.</h1>
+                <p>Treinamento Intensivo + Cartão Virtual + Certificado + Acompanhamento – Apenas 20 Vagas Disponíveis</p>
+                
+                <div class="hero-buttons">
+                    <a href="#pricing" class="btn btn-primary btn-large">Inscrever Agora</a>
+                    <a href="#pricing" class="btn btn-secondary btn-large">Ver Planos</a>
+                </div>
+                
+                 <div class="badge-pro">
+    ⚠️ Restam apenas <span class="badge-num">17</span> vagas!
+</div>
+
+
             </div>
-            <div class="hero-image">
-                <img src="assets/pascoalzage.jpg" alt="Pascoal Zage">
-            </div>
+            
+          <div class="hero-image">
+    <img src="assets/pascoalzage.jpg" alt="Pascoal Zage">
+    <div class="info-card">
+        <h1>Pascoal Zage</h1>
+        <p>Mentor de Treinamento</p>
+        <p>Profissional em Tráfego, Analista de Dados, Programador Web & Mobile – 4 anos de experiência</p>
+    </div>
+</div>
+
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Sobre o Treinamento -->
     <section class="about" id="about">
         <div class="container">
-            <div class="section-title">
-                <h2>O Que Me Diferencia</h2>
-                <p>Combinando expertise técnica em programação com visão estratégica de marketing para entregar resultados mensuráveis</p>
+            <div class="section-header">
+                <h2>Sobre o Treinamento</h2>
+                <p>Capacitação intensiva para atuar no mercado de tráfego pago com técnicas práticas e resultados imediatos</p>
             </div>
+            
             <div class="about-content">
-                <div class="about-text">
-                    <h3>Transformando tráfego em receita com tecnologia e estratégia</h3>
-                    <p>Com mais de 5 anos de experiência no mercado digital, ajudo empresas a escalarem suas vendas através da combinação perfeita entre anúncios precisos e automações inteligentes.</p>
-                    <p>Minha abordagem vai além da simples gestão de campanhas - integro tecnologia, análise de dados e psicologia de vendas para criar máquinas de crescimento contínuo.</p>
+                <div>
+                    <h3>Treinamento Intensivo de Tráfego Pago</h3>
+                    <p><strong>Duração:</strong> 5 horas (virtual + presencial)</p>
+                    <p><strong>Data:</strong> 21 de dezembro</p>
+                    <p><strong>Local:</strong> Centro de Formação Digital (Luanda)</p>
                     
-                    <div class="skills">
-                        <div class="skill-item">
-                            <h4>Especialista em Meta Ads e Google Ads</h4>
-                            <p>Domínio completo das principais plataformas de anúncios para maximizar seu ROI</p>
+                    <p>Este treinamento foi desenvolvido para capacitar novos profissionais de tráfego pago a atuar imediatamente no mercado, aplicando técnicas práticas, análise de dados, inteligência artificial e metodologias usadas internacionalmente.</p>
+                    
+                    <a href="#pricing" class="btn btn-primary">Garantir Minha Vaga</a>
+                </div>
+                
+                <div>
+                    <h3>Cada aluno sai com:</h3>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-credit-card"></i>
+                            <h4>Cartão Virtual</h4>
+                            <p>Pronto para anúncios internacionais</p>
                         </div>
-                        <div class="skill-item">
-                            <h4>Integrações avançadas</h4>
-                            <p>Pixel, Tag Manager, UTM e APIs para rastreamento preciso de conversões</p>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Campanhas Reais</h4>
+                            <p>Conhecimento para criar campanhas reais</p>
                         </div>
-                        <div class="skill-item">
-                            <h4>Capacidade técnica em programação</h4>
-                            <p>Automações personalizadas que eliminam gargalos e aumentam eficiência</p>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <h4>Negociação</h4>
+                            <p>Capacidade para comprar e negociar dólares</p>
                         </div>
-                        <div class="skill-item">
-                            <h4>Foco absoluto em vendas</h4>
-                            <p>Todas as métricas são importantes, mas o que realmente importa é o lucro no seu caixa</p>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <h4>Criativos Profissionais</h4>
+                            <p>Técnicas de criação de criativos profissionais</p>
                         </div>
-                        <div class="skill-item">
-                            <h4>Estratégias personalizadas</h4>
-                            <p>Soluções sob medida para cada nicho e estágio do negócio</p>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Captação de Clientes</h4>
+                            <p>Competências para captar clientes e parcerias</p>
                         </div>
-                        <div class="skill-item">
-                            <h4>Visão de negócio</h4>
-                            <p>Entendo seu modelo de receita para otimizar cada etapa do funil</p>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-certificate"></i>
+                            <h4>Certificado</h4>
+                            <p>Certificado de participação reconhecido</p>
                         </div>
                     </div>
                 </div>
@@ -88,353 +136,452 @@
         </div>
     </section>
 
-   
-    <!-- Services Section -->
-<section class="services" id="services">
+    <!-- Planos e Preços -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Planos e Preços</h2>
+                <p>Escolha o plano ideal para sua formação profissional em tráfego pago</p>
+            </div>
+            
+            <div class="pricing-cards">
+                <!-- Plano 1 -->
+                <div class="pricing-card popular">
+                    <div class="popular-tag">Mais Popular</div>
+                    <div class="pricing-header">
+                        <h3>Virtual + Presencial</h3>
+                        <div class="price">25.000 Kz</div>
+                        <p>Treinamento completo de 1 dia</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Treinamento intensivo 5h</li>
+                            <li><i class="fas fa-check"></i> Cartão virtual incluído</li>
+                            <li><i class="fas fa-check"></i> Certificado de participação</li>
+                            <li><i class="fas fa-check"></i> Coffee break</li>
+                            <li><i class="fas fa-check"></i> Sessão fotográfica</li>
+                            <li><i class="fas fa-check"></i> Material de apoio completo</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#" class="btn btn-primary btn-large">Escolher Plano</a>
+                    </div>
+                </div>
+                
+                <!-- Plano 2 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Já possui cartão</h3>
+                        <div class="price">15.000 Kz</div>
+                        <p>Para quem já tem cartão virtual</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Treinamento intensivo 5h</li>
+                            <li><i class="fas fa-check"></i> Certificado de participação</li>
+                            <li><i class="fas fa-check"></i> Coffee break</li>
+                            <li><i class="fas fa-check"></i> Sessão fotográfica</li>
+                            <li><i class="fas fa-check"></i> Material de apoio completo</li>
+                            <li><i class="fas fa-check"></i> Acesso à comunidade</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#" class="btn btn-secondary btn-large">Escolher Plano</a>
+                    </div>
+                </div>
+                
+                <!-- Plano 3 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Treinamento Domicílio</h3>
+                        <div class="price">25.000 Kz</div>
+                        <p>Treinamento personalizado em sua casa</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 7h a 8h de treinamento presencial</li>
+                            <li><i class="fas fa-check"></i> Certificado de participação</li>
+                            <li><i class="fas fa-check"></i> Material de apoio exclusivo</li>
+                            <li><i class="fas fa-check"></i> Acompanhamento personalizado</li>
+                            <li><i class="fas fa-check"></i> Foco nas suas necessidades</li>
+                            <li><i class="fas fa-check"></i> Suporte pós-treinamento</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#" class="btn btn-secondary btn-large">Escolher Plano</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <!-- Benefícios -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benefícios do Treinamento</h2>
+                <p>Conquiste habilidades valiosas para atuar no mercado digital com excelência</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-bullhorn"></i>
+                    <h4>Campanhas Profissionais</h4>
+                    <p>Aprender a criar campanhas profissionais (Meta Ads )</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-robot"></i>
+                    <h4>Inteligência Artificial</h4>
+                    <p>Utilizar IA para acelerar resultados e otimizar campanhas</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <h4>Análise de Dados</h4>
+                    <p>Analisar dados com precisão para tomar decisões estratégicas</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>Criativos Conversivos</h4>
+                    <p>Criar criativos orientados à conversão e alta performance</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Captação de Clientes</h4>
+                    <p>Encontrar primeiros clientes e construir portfólio</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Parcerias Estratégicas</h4>
+                    <p>Criar parcerias com empresas e agências digitais</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-book"></i>
+                    <h4>Materiais Exclusivos</h4>
+                    <p>Acesso a materiais exclusivos e atualizados constantemente</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>Networking</h4>
+                    <p>Networking com participantes e profissionais do mercado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Melhor Aluno -->
+    <section class="best-student">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Melhor Aluno</h2>
+            </div>
+            
+            <p>O aluno com melhor desempenho receberá acompanhamento individual com o instrutor, incluindo mentoria prática e orientação estratégica para entrar no mercado com alta performance.</p>
+            
+            <a href="#pricing" class="btn btn-primary btn-large">Quero Ser o Melhor Aluno</a>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+     <section class="testimonials" id="testimonials">
     <div class="container">
-        <div class="section-title">
-            <h2>Serviços Premium</h2>
-            <p>Soluções completas para escalar seu negócio com tráfego pago de alta conversão</p>
+        <div class="section-header">
+            <h2>Depoimentos</h2>
+            <p>O que dizem nossos alunos sobre o treinamento</p>
         </div>
         
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Essencial</h3>
-                    <div class="price">Kz 200.000/mês</div>
-                    <p>Ideal para quem está começando</p>
+        <div class="testimonials-grid">
+            <!-- Depoimento 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+                        <img src="assets/img2.jpeg" alt="Carlos Silva">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Carlos Silva</h4>
+                        <p>Empreendedor Digital</p>
+                    </div>
                 </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Gestão de 1 campanha no Meta Ads</li>
-                        <li>Otimização semanal de anúncios</li>
-                        <li>Configuração básica de Pixel</li>
-                        <li>Relatório mensal de performance</li>
-                        <li>Suporte por e-mail</li>
-                    </ul>
-                </div>
-                <div class="service-footer">
-                    <a href="https://wa.me/930620876?text=Quero contratar o pacote Essencial" class="btn-whatsapp">Contratar via WhatsApp</a>
-                </div>
+                <p>"Recebi acompanhamento e hoje já gero resultados consistentes para pequenas empresas. O treinamento foi direto e muito prático. Em apenas uma semana após o curso, já consegui meu primeiro cliente."</p>
             </div>
             
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Avançado</h3>
-                    <div class="price">Kz 330.000/mês</div>
-                    <p>Para negócios em fase de crescimento</p>
+            <!-- Depoimento 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+                        <img src="assets/img1.jpeg" alt="Ana Pereira">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Ana Pereira</h4>
+                        <p>Marketing Manager</p>
+                    </div>
                 </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Gestão de até 3 campanhas (Meta + Google)</li>
-                        <li>Otimização diária de anúncios</li>
-                        <li>Configuração avançada de rastreamento</li>
-                        <li>Testes A/B contínuos</li>
-                        <li>Relatório semanal detalhado</li>
-                        <li>Suporte prioritário</li>
-                    </ul>
-                </div>
-                <div class="service-footer">
-                    <a href="https://wa.me/930620876?text=Quero contratar o pacote Avançado" class="btn-whatsapp">Contratar via WhatsApp</a>
-                </div>
+                <p>"A parte prática sobre criação de cartão virtual foi essencial. Finalmente consegui criar campanhas internacionais. O suporte pós-treinamento fez toda a diferença para minha evolução profissional."</p>
             </div>
             
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Premium</h3>
-                    <div class="price">Kz 500.000/mês</div>
-                    <p>Solução completa para alta escala</p>
-                </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Gestão completa de tráfego</li>
-                        <li>Estratégia multicanal (Meta, Google, TikTok)</li>
-                        <li>Landing Page otimizada</li>
-                        <li>Automações personalizadas</li>
-                        <li>Relatórios executivos diários</li>
-                        <li>Consultoria estratégica mensal</li>
-                        <li>Suporte 24/7</li>
-                    </ul>
-                </div>
-                <div class="service-footer">
-                    <a href="https://wa.me/930620876?text=Quero contratar o pacote Premium" class="btn-whatsapp">Contratar via WhatsApp</a>
-                </div>
-            </div>
+            <!-- Depoimento 3 -->
+<div class="testimonial-card">
+    <div class="testimonial-header">
+        <div class="testimonial-avatar">
+            <img src="assets/img3.png" alt="Miguel Santos">
+        </div>
+        <div class="testimonial-info">
+            <h4>Miguel Santos</h4>
+            <p>Consultor de Marketing - Deriv</p>
+        </div>
+    </div>
+    <p>"Trabalhei com o Pascoal Zage na Deriv e pude acompanhar de perto seu conhecimento em tráfego pago. Participar do treinamento dele foi um divisor de águas para minha carreira: em poucos dias, consegui aplicar técnicas reais e ver resultados concretos. Recomendo fortemente para quem quer aprender na prática e crescer no digital!"</p>
+</div>
+
+            
+            <!-- Depoimento 4 -->
+ <!-- Depoimento 4 -->
+<div class="testimonial-card">
+    <div class="testimonial-header">
+        <div class="testimonial-avatar">
+            <img src="assets/img4.png" alt="Beatriz Costa">
+        </div>
+        <div class="testimonial-info">
+            <h4>Beatriz Costa</h4>
+            <p>Gestora de Tráfego - Deriv</p>
+        </div>
+    </div>
+    <p>"Mesmo já atuando em tráfego pago, trabalhar com o Pascoal Zage na Deriv me abriu novas possibilidades. Ele me ensinou a usar inteligência artificial de forma prática para otimizar campanhas e gerar resultados ainda melhores. Recomendo o curso para quem quer unir conhecimento técnico à inovação e acelerar seus resultados no marketing digital!"</p>
+</div>
+
+
         </div>
     </div>
 </section>
 
 
-    <!-- Tools Section -->
-    <section class="tools">
+    <!-- Empresas Parceiras -->
+    <section class="partners">
         <div class="container">
-            <div class="section-title">
-                <h2>Tecnologias que Utilizo</h2>
-                <p>Ferramentas premium para garantir os melhores resultados</p>
+            <div class="section-header">
+                <h2>Empresas Parceiras</h2>
+                <p>Algumas empresas que já colaboraram com nossos treinamentos</p>
             </div>
             
-            <div class="tools-grid">
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-facebook"></i>
-                    </div>
-                    <p>Meta Ads</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-google"></i>
-                    </div>
-                    <p>Google Ads</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-tags"></i>
-                    </div>
-                    <p>Tag Manager</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <p>Google Analytics</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-figma"></i>
-                    </div>
-                    <p>Figma</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <p>JavaScript</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <p>MySQL</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-code-branch"></i>
-                    </div>
-                    <p>UTM</p>
-                </div>
-            </div>
+         <div class="partners">
+    <div class="partners-logos">
+        <div class="partner-logo deriv">DERIV</div>
+        <div class="partner-logo netzage">NETZAGE</div>
+        <div class="partner-logo tech">TECH SOLUTIONS</div>
+        <div class="partner-logo marketing">MARKETING PRO</div>
+        <div class="partner-logo growth">GROWTH HUB</div>
+    </div>
+</div>
+
         </div>
     </section>
 
-    <!-- Results Section -->
-    <section class="results" id="results">
-        <div class="container">
-            <div class="section-title">
-                <h2>Resultados Comprovados</h2>
-                <p>Números reais que impactaram negócios dos meus clientes</p>
-            </div>
-            
-            <div class="results-content">
-                <div class="results-text">
-                    <h3>Transformando investimento em retorno</h3>
-                    <p>Minhas estratégias não são baseadas em achismos, mas em dados concretos que comprovam eficiência. Cada real investido em tráfego deve ser rastreável e justificável.</p>
-                    <p>Veja alguns exemplos de resultados alcançados para clientes em diferentes nichos:</p>
-                    
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="number">5x</div>
-                            <p>Aumento no ROI médio</p>
-                        </div>
-                        <div class="stat-item">
-                            <div class="number">-40%</div>
-                            <p>Redução no Custo por Lead</p>
-                        </div>
-                        <div class="stat-item">
-                            <div class="number">300%</div>
-                            <p>Aumento no ticket médio</p>
-                        </div>
-                        <div class="stat-item">
-                            <div class="number">12h</div>
-                            <p>Tempo médio para primeira venda</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="results-image">
-                    <img src="assets/image.png" alt="Gráficos de Resultados">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Depoimentos</h2>
-                <p>O que meus clientes dizem sobre o trabalho</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "O Pascoal transformou completamente nossa estratégia digital. Em 3 meses, reduzimos nosso CPA em 60% enquanto aumentávamos o volume de vendas. Sua capacidade técnica faz toda diferença!"
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/clientes/man2.jpg" alt="Cliente 1">
-                        <div class="author-info">
-                            <h4>Ricardo Silva</h4>
-                            <p>CEO - VS Light</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Finalmente encontrei um profissional que entende tanto de tráfego quanto de programação. As automações que ele implementou pouparam centenas de horas de trabalho manual."
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/clientes/girl2.jpg" alt="Cliente 2">
-                        <div class="author-info">
-                            <h4>Ana Paula Mendes</h4>
-                            <p>Diretora de Marketing</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Trabalho com vários gestores de tráfego, mas o Pascoal se destaca pela visão estratégica. Ele não só gerencia campanhas, mas pensa no negócio como um todo. Resultado: 5x mais vendas com o mesmo orçamento."
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/clientes/man.jpg" alt="Cliente 3">
-                        <div class="author-info">
-                            <h4>Carlos Eduardo</h4>
-                            <p>Empreendedor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="faq" id="faq">
         <div class="container">
-            <div class="section-title">
+            <div class="section-header">
                 <h2>Perguntas Frequentes</h2>
-                <p>Tire suas dúvidas sobre como trabalhamos</p>
+                <p>Tire suas dúvidas sobre o treinamento intensivo</p>
             </div>
             
             <div class="faq-container">
+                <!-- Pergunta 1 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Quanto tempo leva para ver resultados?</span>
+                        <span>Quem pode participar do treinamento?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Os primeiros sinais de otimização geralmente aparecem em 7-14 dias, mas resultados consistentes levam em média 30-60 dias. Depende muito do estágio atual do seu negócio e da qualidade da sua oferta.</p>
+                        <p>Qualquer pessoa interessada em ingressar no mercado de tráfego pago, desde iniciantes até profissionais que desejam atualizar seus conhecimentos. Não é necessário conhecimento prévio em marketing digital.</p>
                     </div>
                 </div>
                 
+                <!-- Pergunta 2 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Você oferece garantia de resultados?</span>
+                        <span>Preciso ter computador para participar?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Nenhum profissional sério pode garantir resultados em marketing digital, pois muitos fatores estão fora do nosso controle (qualidade da oferta, mercado, sazonalidade etc). Porém, garanto trabalho dedicado, transparência total e otimização constante para maximizar seu ROI.</p>
+                        <p>Sim, é necessário ter um computador com acesso à internet para acompanhar as partes práticas do treinamento. Para o treinamento presencial, você pode trazer seu próprio notebook.</p>
                     </div>
                 </div>
                 
+                <!-- Pergunta 3 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Como funciona o processo de trabalho?</span>
+                        <span>Existe limite de vagas?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>1. Diagnóstico completo do seu negócio<br>
-                        2. Definição de metas e KPIs<br>
-                        3. Implementação técnica (pixels, tags, conversões)<br>
-                        4. Criação e lançamento de campanhas<br>
-                        5. Otimização diária/semanal<br>
-                        6. Relatórios e ajustes estratégicos</p>
+                        <p>Sim, limitamos a 20 vagas para garantir qualidade no atendimento e suporte individualizado a cada participante. Recomendamos garantir sua vaga com antecedência.</p>
                     </div>
                 </div>
                 
+                <!-- Pergunta 4 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Preciso ter um site ou landing page?</span>
+                        <span>Como faço o pagamento?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Sim, é essencial. Caso não tenha, posso ajudar no desenvolvimento de uma landing page otimizada para conversões (serviço incluso no pacote Premium).</p>
+                        <p>Aceitamos pagamento por transferência bancária, depósito e MB Way. Após a inscrição, enviaremos as instruções detalhadas para o pagamento.</p>
                     </div>
                 </div>
                 
+                <!-- Pergunta 5 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Qual o formato de contrato?</span>
+                        <span>É emitido certificado?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Trabalho com contratos mensais com fidelidade mínima de 3 meses (tempo necessário para otimizações consistentes). Após esse período, pode ser cancelado a qualquer momento.</p>
+                        <p>Sim, todos os participantes que completarem o treinamento receberão um certificado de participação reconhecido, que pode ser incluído no currículo e portfólio profissional.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como funciona o acompanhamento virtual?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Após o treinamento presencial, você terá acesso a um grupo exclusivo para tirar dúvidas e receber suporte por 30 dias. Também disponibilizamos materiais complementares online.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 7 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como funciona o cartão virtual?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Durante o treinamento, ensinamos passo a passo como criar um cartão virtual internacional para realizar pagamentos em plataformas de anúncios como Meta Ads e Google Ads.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 8 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>O treinamento é realmente intensivo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, o treinamento foi projetado para ser completado em um único dia, com conteúdo condensado e focado na prática, para que você saia pronto para atuar no mercado imediatamente.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 9 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Há material de apoio incluído?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, todos os participantes recebem material de apoio completo em formato digital, incluindo templates, checklists, guias práticos e acesso a ferramentas exclusivas.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 10 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Posso parcelar o valor do treinamento?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, oferecemos opções de parcelamento em até 3x sem juros para alguns métodos de pagamento. Entre em contato para mais informações sobre condições de parcelamento.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Está pronto para escalar suas vendas?</h2>
-            <p>Com um profissional que entende estratégia, código e resultado?</p>
-            <a href="https://wa.me/930620876" class="btn-dark">Clique aqui e negocie comigo agora via WhatsApp</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Pascoal Zage</h3>
-                    <p>Gestor de Tráfego Pago & Programador com foco em Vendas, ROI e Crescimento de Negócios.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                    </div>
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-chart-line"></i> Tráfego Pago Pro
+                    </a>
+                    <p>Treinamento intensivo para formação de profissionais de tráfego pago de alta performance. Capacitamos você para atuar no mercado digital em apenas 1 dia.</p>
                 </div>
-                <div class="footer-column">
-                    <h3>Serviços</h3>
+                
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
                     <ul>
-                        <li><a href="#">Gestão de Tráfego</a></li>
-                        <li><a href="#">Programação para Marketing</a></li>
-                        <li><a href="#">Consultoria Estratégica</a></li>
-                        <li><a href="#">Automações Personalizadas</a></li>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre o Treinamento</a></li>
+                        <li><a href="#pricing">Planos</a></li>
+                        <li><a href="#benefits">Benefícios</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>Contato</h3>
+                
+                <div class="footer-links">
+                    <h4>Recursos</h4>
                     <ul>
-                        <li><a href="mailto:pascoalzage54@gmail.com">contato@pascoalzage.com</a></li>
-                        <li><a href="tel:+244930620876">+244 930 620 876</a></li>
-                        <li><a href="https://wa.me/930620876">WhatsApp</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#faq">Perguntas Frequentes</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
                     </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contactos</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +244 999 999 999</li>
+                        <li><i class="fas fa-envelope"></i> info@trafegopagopro.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Luanda, Angola</li>
+                    </ul>
+                    
+                    <a href="#pricing" class="btn btn-primary" style="margin-top: 1.5rem;">Garantir Minha Vaga</a>
                 </div>
             </div>
-            <div class="copyright">
+            
+            <div class="footer-bottom">
                 <p>&copy; 2025 Pascoal Zage. Todos os direitos reservados.</p>
+                <p>Treinamento Intensivo - 21 de Dezembro | Apenas 20 vagas disponíveis</p>
             </div>
         </div>
     </footer>
+<script src="script.js"></script>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/930620876" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+<!-- Adicione isso antes de fechar o body -->
+<a href="https://wa.me/244930620876?text=Olá! Gostaria de saber mais sobre o treinamento intensivo." 
+   class="whatsapp-button" 
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Conversar no WhatsApp">
+   
+    <!-- Anel de pulso -->
+    <div class="pulse-ring"></div>
+    
+    <!-- Ícone do WhatsApp -->
+    <i class="fab fa-whatsapp"></i>
+    
+    <!-- Tooltip com número -->
+    <div class="phone-tooltip">
+        +244 930 620 876
+    </div>
+    
+    <!-- Badge de notificação (opcional) -->
+    <!-- <div class="notification-badge">1</div> -->
+</a>
 
-   <script src="assets/script.js"></script>
+<!-- Adicione o Font Awesome no head -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+   
 </body>
 </html>
